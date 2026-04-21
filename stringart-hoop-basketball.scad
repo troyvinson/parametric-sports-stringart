@@ -226,9 +226,9 @@ module basketball_dome(radius, seam_width=1.5) {
     }
 
     // Apply a tilt to present the iconic swoops dynamically in the frame
-    orient_x = 35;
-    orient_y = 25;
-    orient_z = 55;
+    orient_x = -35;
+    orient_y = -10;
+    orient_z = 0;
     
     // Inverse transform to pull global string geometry into this local space
     module string_cut() {
