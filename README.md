@@ -10,7 +10,15 @@ An **OpenSCAD** project designed to generate high-fidelity, 3D-printable string 
 
 ## 📖 Usage Instructions
 
+1. **Install OpenSCAD:** Download and install [OpenSCAD](https://openscad.org/downloads.html).
+2. **Open the File:** Open any of the `.scad` files (e.g., `stringart-hexagon-soccerball.scad`) in OpenSCAD.
+3. **Customize:** Unhide the **Customizer** panel (Window -> Customizer). Use it to adjust parameters such as frame width, depth, string density, and colors.
+4. **Render:** Once satisfied with the preview, render the model by pressing `F6` (Design -> Render). Note that rendering might take a few minutes depending on the complexity and the `$fn` variable.
+5. **Export:** Export the rendered model to an STL or 3MF file by pressing `F7` (File -> Export -> Export as STL/3MF).
 
+### 💡 3D Printing Tips
+* **Thin Walls/Arachne:** The "strings" in this model are very fine (typically 0.4 - 0.6mm wide). Ensure your slicer is set to use the **Arachne** wall generator or has **"Detect Thin Walls"** enabled.
+* **Layer Height:** A layer height of 0.2mm is recommended.
 
 ---
 
