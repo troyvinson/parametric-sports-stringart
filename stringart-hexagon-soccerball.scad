@@ -233,8 +233,9 @@ module soccer_ball_dome(radius, groove_width=0.8, groove_depth=1.0) {
     // 60 vertices of the Truncated Icosahedron
     trunc_v = [
         for (i=[0:11], j=[0:11]) 
-            if (norm(ico_v[i] - ico_v[j]) > 1.9 && norm(ico_v[i] - ico_v[j]) < 2.1)
-                ico_v[i] + (ico_v[j] - ico_v[i]) / 3
+            let (v_diff = ico_v[j] - ico_v[i], d = norm(v_diff))
+            if (d > 1.9 && d < 2.1)
+                ico_v[i] + v_diff / 3
     ];
     
     base_r = norm(trunc_v[0]);
@@ -244,7 +245,8 @@ module soccer_ball_dome(radius, groove_width=0.8, groove_depth=1.0) {
         difference() {
             sphere(r=radius, $fn=120);
             for (i=[0:59], j=[i+1:59]) {
-                if (norm(trunc_v[i] - trunc_v[j]) > 0.6 && norm(trunc_v[i] - trunc_v[j]) < 0.75) {
+                let (d = norm(trunc_v[i] - trunc_v[j]))
+                if (d > 0.6 && d < 0.75) {
                     hull() {
                         translate((trunc_v[i] / base_r) * (radius - groove_depth)) 
                             sphere(r=groove_width/2, $fn=8);
@@ -266,9 +268,10 @@ module soccer_ball_dome(radius, groove_width=0.8, groove_depth=1.0) {
             hull() {
                 cube(0.01, center=true); // Center of the sphere
                 for (j=[0:11]) {
-                    if (norm(ico_v[i] - ico_v[j]) > 1.9 && norm(ico_v[i] - ico_v[j]) < 2.1) {
+                    let (v_diff = ico_v[j] - ico_v[i], d = norm(v_diff))
+                    if (d > 1.9 && d < 2.1) {
                         // Project the pentagon vertices out past the radius to create solid wedges
-                        translate(((ico_v[i] + (ico_v[j] - ico_v[i]) / 3) / base_r) * (radius * 1.5))
+                        translate(((ico_v[i] + v_diff / 3) / base_r) * (radius * 1.5))
                             sphere(r=0.1, $fn=8);
                     }
                 }

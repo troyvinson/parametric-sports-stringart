@@ -233,7 +233,7 @@ module baseball_dome(radius, seam_width=1.5) {
                     p_next = b_pt(i + 0.5); 
                     t_vec = p_next - p;
                     t_norm = t_vec / norm(t_vec); 
-                    up_norm = p / norm(p);
+                    up_norm = p / radius; // p is on sphere of radius radius
                     side_norm = cross(up_norm, t_norm); 
                     
                     sw = seam_width * 2; // Width of the V legs
