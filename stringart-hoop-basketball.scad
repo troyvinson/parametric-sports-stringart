@@ -1,3 +1,11 @@
+// Standard Digital File License
+//
+//Copyright (c) 2026 Troy Vinson
+//
+//This content is licensed under a Standard Digital File License.
+//
+//You shall not share, sub-license, sell, rent, host, transfer, or distribute in any way the digital or 3D printed versions of this object, nor any other derivative work of this object in its digital or physical format (including - but not limited to - remixes of this object, and hosting on other digital platforms). The objects may not be used without permission in any way whatsoever in which you charge money, or collect fees.
+
 /* [Basketball Frame Settings] */
 // 1. The total width of the round frame.
 frame_width = 160; // min:100
