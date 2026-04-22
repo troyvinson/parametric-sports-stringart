@@ -59,8 +59,8 @@ string_height = 0.41;
 
 /* Center Void */
 void_shape = "Ellipse"; // [None, Ellipse, Rectangle, Hexagon, Heart]
-void_width = 35; // [1:0.5:200]
-void_height = 25; // [1:0.5:200]
+void_width = 90; // [1:0.5:200]
+void_height = 90; // [1:0.5:200]
 
 // Lock the frame height to exactly match the 180:125 width-to-height ratio 
 frame_height = frame_width * (135 / 180);

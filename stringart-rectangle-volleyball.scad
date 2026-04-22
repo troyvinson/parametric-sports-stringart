@@ -76,8 +76,8 @@ string_height = 0.41;
 
 /* Center Void */
 void_shape = "Ellipse"; // [None, Ellipse, Rectangle, Hexagon, Heart]
-void_width = 20; // [1:0.5:200]
-void_height = 20; // [1:0.5:200]
+void_width = 80; // [1:0.5:200]
+void_height = 80; // [1:0.5:200]
 
 // --- Execution ---
 union() {

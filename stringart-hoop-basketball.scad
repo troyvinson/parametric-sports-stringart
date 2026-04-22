@@ -59,9 +59,9 @@ string_height = 0.41;
 // 1. Removes the chaotic center convergence point.
 void_shape = "Ellipse"; // [None, Ellipse, Rectangle, Hexagon, Heart]
 // 2. Width of the center string cut.
-void_width = 20; // [1:0.5:200]
+void_width = 80; // [1:0.5:200]
 // 3. Height of the center string cut.
-void_height = 20; // [1:0.5:200]
+void_height = 80; // [1:0.5:200]
 
 
 // Mathematically derive flat bottom boundary 
@@ -227,7 +227,7 @@ module basketball_dome(radius, seam_width=1.5) {
 
     // Apply a tilt to present the iconic swoops dynamically in the frame
     orient_x = -35;
-    orient_y = -10;
+    orient_y = -17;
     orient_z = 0;
     
     // Inverse transform to pull global string geometry into this local space
